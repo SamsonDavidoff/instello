@@ -27,6 +27,23 @@ header {
         margin-left: 25px;
         color: #464646;
       }
+
+      div {
+        cursor: pointer;
+        background-color: #EC4899;
+        padding: 8px 15px;
+        border-radius: 4px;
+        transition: background-color .3s linear;
+
+        &:hover {
+          background-color: #DA2777;
+        }
+      }
+
+      span {
+        color: white;
+        margin-left: 10px;
+      }
     }
   }
 
