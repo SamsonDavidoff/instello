@@ -6,6 +6,7 @@ import { CoreRoutingModule } from "@core/core-routing.module";
 
 import { DefaultLayoutComponent } from './layouts/default/default-layout/default-layout.component';
 import { FeedPageComponent } from './pages/feed-page/feed-page.component';
+import { LayoutHeaderComponent } from "@core/layouts/default/layout-header/layout-header.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FeedPageComponent } from './pages/feed-page/feed-page.component';
 
     DefaultLayoutComponent,
     FeedPageComponent,
+    LayoutHeaderComponent,
   ],
   imports: [
     CommonModule,
