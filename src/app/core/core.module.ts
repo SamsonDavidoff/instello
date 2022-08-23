@@ -4,23 +4,18 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { CoreRoutingModule } from "@core/core-routing.module";
 
-import { DefaultLayoutComponent } from './layouts/default/default-layout/default-layout.component';
-import { FeedPageComponent } from './pages/feed-page/feed-page.component';
+import { DefaultLayoutComponent } from '@core/layouts/default/default-layout/default-layout.component';
 import { LayoutHeaderComponent } from "@core/layouts/default/layout-header/layout-header.component";
+import { LayoutSidebarComponent } from "@core/layouts/default/layout-sidebar/layout-sidebar.component";
+
+import { FeedPageComponent } from './pages/feed-page/feed-page.component';
 
 @NgModule({
   declarations: [
-    // AboutPageComponent,
-    // NotfoundPageComponent,
-    // DefaultLayoutComponent,
-    // LayoutHeaderComponent,
-    // LayoutFooterComponent,
-    // LayoutSidebarComponent,
-    // PageHeaderCardComponent
-
     DefaultLayoutComponent,
-    FeedPageComponent,
     LayoutHeaderComponent,
+    LayoutSidebarComponent,
+    FeedPageComponent,
   ],
   imports: [
     CommonModule,
