@@ -1,3 +1,7 @@
 import { ActionReducerMap } from "@ngrx/store";
 
-export const reducers: ActionReducerMap<any> = {}
+import { rootReducer } from "@core/store/root.reducer";
+
+export const reducers: ActionReducerMap<any> = {
+  root: rootReducer
+}
