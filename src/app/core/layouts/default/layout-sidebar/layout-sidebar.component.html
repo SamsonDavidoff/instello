@@ -7,3 +7,35 @@
     </svg>
   </div>
 </div>
+<div id="sidebar-container">
+  <div id="user-info">
+    <instello-user-avatar
+      [image]="'http://demo.foxthemes.net/instellohtml/assets/images/avatars/avatar-2.jpg'"
+      [imageAltText]="'ye chizi'">
+    </instello-user-avatar>
+    <span>Samson Davidoff</span>
+  </div>
+  <div id="follow-info">
+    <div>
+      <span>Post</span>
+      <span>130</span>
+    </div>
+    <div>
+      <span>Following</span>
+      <span>1,230</span>
+    </div>
+    <div>
+      <span>Followers</span>
+      <span>2,430</span>
+    </div>
+  </div>
+  <ul>
+    <li *ngFor="let item of sidebarItems">
+      <instello-sidebar-item
+        [title]="item.title"
+        [route]="item.route">
+        <div style="width: 23px; height: 23px" [innerHTML]="item.icon | safeHtml"></div>
+      </instello-sidebar-item>
+    </li>
+  </ul>
+</div>

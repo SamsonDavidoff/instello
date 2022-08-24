@@ -9,6 +9,9 @@ import { LayoutHeaderComponent } from "@core/layouts/default/layout-header/layou
 import { LayoutSidebarComponent } from "@core/layouts/default/layout-sidebar/layout-sidebar.component";
 
 import { FeedPageComponent } from './pages/feed-page/feed-page.component';
+import { SidebarItemComponent } from './components/sidebar-item/sidebar-item.component';
+import { SharedModule } from "@shared/shared.module";
+import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { FeedPageComponent } from './pages/feed-page/feed-page.component';
     LayoutHeaderComponent,
     LayoutSidebarComponent,
     FeedPageComponent,
+    SidebarItemComponent,
+    UserAvatarComponent,
   ],
   imports: [
     CommonModule,
     CoreRoutingModule,
     HttpClientModule,
+    SharedModule,
   ],
   exports: [
     DefaultLayoutComponent,

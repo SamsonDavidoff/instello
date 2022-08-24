@@ -1,5 +1,5 @@
 :host {
-  width: 365px;
+  min-width: 300px;
   height: 100%;
   background-color: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -22,16 +22,68 @@
 
   div {
     background-color: #F0F2F5;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     border-radius: 50px;
     padding: 5px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   svg {
     width: 22px;
     height: 22px;
   }
+}
+
+#sidebar-container {
+  min-height: calc(100vh - 66px);
+
+  #user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+
+    span {
+      color: #666666;
+      font-size: 21px;
+      font-weight: 500;
+      margin-top: 15px;
+    }
+  }
+}
+
+#follow-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgb(229, 231, 235);
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    :first-child {
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    :not(:first-child) {
+      font-size: 15px;
+    }
+  }
+}
+
+ul {
+  padding: 15px;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
 }

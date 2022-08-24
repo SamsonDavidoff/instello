@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { sidebarItems } from "@core/constants/sidebar.constant";
+
 @Component({
   selector: 'instello-layout-sidebar',
   templateUrl: './layout-sidebar.component.html',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutSidebarComponent implements OnInit {
 
-  constructor() { }
+  sidebarItems = sidebarItems;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
 }
