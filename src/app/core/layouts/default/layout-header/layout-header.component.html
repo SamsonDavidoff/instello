@@ -1,5 +1,5 @@
 <header>
-  <div>
+  <div *ngIf="fixedSidebarVisible; else showMobileMode">
     <svg style="width: 20px; height: 20px; color: #9ca3af" xmlns="http://www.w3.org/2000/svg" fill="none"
          viewBox="0 0 24 24"
          stroke="currentColor">
@@ -8,8 +8,20 @@
     </svg>
     <input type="text" placeholder="Search...">
   </div>
-  <div id="dropdowns">
+  <ng-template #showMobileMode>
     <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          fill="#464646"
+          d="M3,8H21a1,1,0,0,0,0-2H3A1,1,0,0,0,3,8Zm18,8H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Zm0-5H3a1,1,0,0,0,0,2H21a1,1,0,0,0,0-2Z"
+        />
+      </svg>
+      <img src="http://demo.foxthemes.net/instellohtml/assets/images/logo-mobile.png" alt=""
+           style="max-width: 80px; margin-left: 20px">
+    </div>
+  </ng-template>
+  <div id="dropdowns">
+    <div *ngIf="fixedSidebarVisible">
       <svg style="margin-left: 0 !important; width: 22px; height: 22px" fill="white" xmlns="http://www.w3.org/2000/svg"
            class="ionicon s-ion-icon"
            viewBox="0 0 512 512"><title>Add
@@ -17,7 +29,7 @@
         <path
           d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z"></path>
       </svg>
-      <span>Upload</span>
+      <span style="font-weight: 500">Upload</span>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
